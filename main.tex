@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[margin=1.25in]{geometry}             % 页面边缘留白设置
+
+\pagestyle{fancy}                                % 页头页脚自定义包
+\setmainfont{思源宋体 CN}                        % 字体设置
+\setmonofont{等距更纱黑体 SC}                    % 等宽字体设置
+\setCJKmainfont{思源宋体 CN}                     % 中文字体设置
+\setCJKmonofont{等距更纱黑体 SC}                 % 中文等宽字体设置
+\linespread{1.5}                                 % 行距
+
+\lstset{                                         % 代码风格设置
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries,
+    numbers=left,
+    frame=single,
+    columns=fixed,
+    showspaces=false,
+    showstringspaces=false,
+    language=java,
+    breaklines=true
+}
+
+\renewcommand\contentsname{目录}                 % 目录标题
+
+\begin{document}
+
+\include{title}                                  % 标题页
+
+\tableofcontents                                 % 目录页
+\newpage
+
+\include{section/section1}                       % 第一节
+
+\appendix                                        % 附录
+\include{appendix/appendixA}
+
+\end{document}
